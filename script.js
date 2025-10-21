@@ -7,9 +7,25 @@ menuIcon.onclick=()=>{
     navbar.classList.toggle('active');
 
 }
+
+const btn = document.getElementById('readMoreBtn');
+const moreText = document.getElementById('moreText');
+
+btn.addEventListener('click', () => {
+  if (moreText.style.display === 'none' || moreText.style.display === '') {
+    moreText.style.display = 'block';
+    btn.textContent = 'Read Less';
+  } else {
+    moreText.style.display = 'none';
+    btn.textContent = 'Read More';
+  }
+});
+
 /*  scroll sections */
 let sections =document.querySelectorAll('section');
 let navLinks =document.querySelectorAll('header nav a');
+
+
 
 window.onscroll =()=>{
     sections.forEach(sec=>{
